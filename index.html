@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Temporally Decoupled Touch-Responsive Humanoid Interaction with Interruptible Motion Execution. Humanoids 2026 project page.">
+    <title>Temporally Decoupled Touch-Responsive Humanoid Interaction with Interruptible Motion Execution</title>
+    <link rel="icon" type="image/jpeg" href="static/images/rilab_logo.jpg">
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/bulma.min.css">
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="static/css/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+    <script defer src="static/js/fontawesome.all.min.js"></script>
+    <script src="static/js/bulma-carousel.min.js"></script>
+    <script src="static/js/bulma-slider.min.js"></script>
+    <script src="static/js/index.js"></script>
+    <script defer src="static/js/scenario-carousel.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Temporally Decoupled Touch-Responsive Humanoid Interaction with Interruptible Motion Execution</h1>
+          <div class="is-size-4 publication-authors">
+            <span class="author-block"><a href="https://taemoon.notion.site/taemoon-page" target="_blank" rel="noopener noreferrer">Taemoon Jeong</a><sup>1&dagger;</sup>,</span>
+            <span class="author-block">Junghyeon Ma<sup>2&dagger;</sup>,</span>
+            <span class="author-block"><a href="https://chanwookim971024.github.io/" target="_blank" rel="noopener noreferrer">Chanwoo Kim</a><sup>1</sup>,</span>
+            <span class="author-block">Junha Min<sup>2</sup>,</span>
+            <span class="author-block">Yunseong Bang<sup>2</sup>,</span>
+            <span class="author-block">Jeongeun Park<sup>1</sup>,</span>
+            <span class="author-block"><a href="https://sites.google.com/view/sungjoon-choi/home?authuser=0" target="_blank" rel="noopener noreferrer">Sungjoon Choi</a><sup>1*</sup>,</span>
+            <span class="author-block"><a href="https://www.kspark.me/" target="_blank" rel="noopener noreferrer">Kyungseo Park</a><sup>2*</sup></span>
+          </div>
+          <div class="is-size-4 publication-authors">
+            <span class="author-block">Korea University<sup>1</sup>,<br>Daegu Gyeongbuk Institute of Science and Technology (DGIST)<sup>2</sup><br></span>
+            <span class="eql-cntrb"><small><br><sup>&dagger;</sup>Equal Contribution</small></span>
+            <span class="eql-cntrb"><small><br><sup>*</sup>Corresponding Authors</small></span>
+          </div>
+          <div class="affiliation-logos">
+            <img class="affiliation-logo-ku" src="static/images/ku.png" alt="Korea University">
+            <span class="affiliation-logo-dgist"><img src="static/images/dgist.png" alt="DGIST"></span>
+          </div>
+          <p class="is-size-4" style="margin-top: 0.5em; color: #666;">Accepted to <strong>Humanoids 2026</strong></p>
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block"><a href="#paper" class="external-link button is-normal is-rounded is-dark"><span class="icon"><i class="fas fa-file-pdf"></i></span><span>Paper</span></a></span>
+              <span class="link-block"><a href="#demos" class="external-link button is-normal is-rounded is-dark"><span class="icon"><i class="fas fa-play"></i></span><span>Demos</span></a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Teaser video -->
+<section class="hero teaser" id="teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser-video" autoplay controls muted loop playsinline preload="metadata" poster="static/images/scenario1-1_attentive.jpg" width="100%" style="display: block; width: 100%; height: auto;" aria-label="Attentive interaction demonstration">
+        <source src="static/videos/scenario1/1_attentive.mp4" type="video/mp4">
+        Your browser does not support the video tag. <a href="static/videos/scenario1/1_attentive.mp4">Download the Attentive demo</a>.
+      </video>
+      <p class="is-size-5" style="margin-top: 1rem;">Our humanoid combines multimodal tactile skin and visual spatial awareness for touch-responsive interaction. Asynchronous perception updates guide expressive motion, with anchor-based transitions preserving continuous 200 Hz execution.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified"><p class="is-size-5">A humanoid can be touched while executing an expressive motion, requiring behavior updates without disrupting continuous execution. This is challenging because tactile state, touch-type estimation, and vision-based spatial context operate at different temporal scales. We hypothesize that separating these streams according to their temporal roles enables asynchronous updates while preserving fixed-rate control. We present a touch-responsive humanoid system with a temporally decoupled runtime architecture and interruptible motion execution. A 200 Hz region-wise tactile state supports immediate interruption or hold requests, while slower touch-type and vision-derived occupancy streams update the pending behavior. An anchor-based executor redirects the motion at the next valid anchor. The analytical command-level timing estimate is approximately 14 ms under the assumed stage delays, excluding anchor waiting time and actuator response. A 20-participant study evaluates four touch classes. Across 60 interaction trials, the intended transition was selected in 55 cases (91.7%), and all selected motions satisfied their predefined continuation, hold, or anchor-based redirection outcomes, with no observed robot–human collisions under tested conditions.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small" id="platform">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3">Touch-Responsive Humanoid Platform</h2>
+      <div class="columns is-vcentered">
+        <div class="column is-half has-text-centered">
+          <img src="static/images/Figure1_robot_overview.png" alt="(a) 12-DoF upper-body humanoid, (b) link-level sensing electronics, and (c) a multimodal pneumatic/capacitive skin element." style="display: block; width: 100%; height: auto;" loading="lazy">
+        </div>
+        <div class="column is-half">
+          <div class="content is-size-5">
+            <p><strong>(a) Upper-Body Platform:</strong> The 12-DoF humanoid combines a 2-DoF head and two 5-DoF arms. An LCD display presents facial expressions synchronized with upper-body motion.</p>
+            <p><strong>(b) Link-Level Sensing Electronics:</strong> Local Teensy 4.0 microcontrollers condition and aggregate tactile signals near each robot link.</p>
+            <p><strong>(c) Multimodal Skin Element:</strong> Pneumatic pads capture contact pressure, while conductive fabric electrodes detect proximity and light contact through capacitance changes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small" id="tactile-sensing">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3">Multimodal Tactile Sensing</h2>
+      <div class="columns is-vcentered">
+        <div class="column is-half has-text-centered">
+          <img src="static/images/Figure2_sensor_info.png" alt="Three sensing responses: Press with low-pass filtered pneumatic pressure, Tap with high-pass filtered pneumatic pressure, and Touch with capacitance changes. Dashed lines show detection thresholds." style="display: block; width: 100%; height: auto;" loading="lazy">
+        </div>
+        <div class="column is-half">
+          <div class="content is-size-5">
+            <p>Our humanoid's multimodal skin combines pneumatic pressure and capacitive sensing to provide complementary cues.</p>
+            <p><strong>Press:</strong> Low-pass pressure captures sustained contact.</p>
+            <p><strong>Tap:</strong> High-pass pressure captures impulsive contact.</p>
+            <p><strong>Touch:</strong> Capacitance captures proximity and light contact.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small" id="architecture">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3">Temporally Decoupled Interaction Architecture</h2>
+      <div style="text-align: center;"><img src="static/images/Figure_system_diagram.png" alt="(a) Multimodal skin and vision provide perception sources. (b) Fast tactile, semantic tactile, and spatial streams update asynchronously. (c) A behavior selector and reflex monitor feed an anchor-based transition executor with a 200 Hz joint command loop." width="1000" style="height: auto;" loading="lazy"></div>
+      <div class="content is-size-5 has-text-justified" style="margin-top: 1rem;">
+        <p><strong>(a) Perception Sources:</strong> Our pneumatic and capacitive skin provides pressure, impulse, and proximity cues indexed by body region. In parallel, a stereo camera tracks human pose to estimate occupancy around the robot.</p>
+        <p><strong>(b) Asynchronous Runtime Streams:</strong> Fast tactile monitoring, touch-type estimation, and spatial occupancy update independently at 200 Hz, 4 Hz, and approximately 30 Hz, respectively. Each stream provides its latest observation without blocking the command loop.</p>
+        <p><strong>(c) Decision &amp; Execution:</strong> The selector updates the pending behavior using tactile and spatial context, while direct tactile changes can issue higher-priority hold or interruption requests. The executor maintains 200 Hz commands and redirects motion through a validated transition at the next allowable anchor.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small" id="voxel">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3">Voxel-Based Spatial Context</h2>
+      <div class="columns">
+        <div class="column has-text-centered">
+          <video controls muted playsinline preload="none" poster="static/images/voxel-1_voxel_env.jpg" width="100%" style="display: block; width: 100%; height: auto;" aria-label="Voxel environment demo 1: left-side region activation"><source src="static/videos/voxel/1_voxel_env.mp4" type="video/mp4">Your browser does not support the video tag. <a href="static/videos/voxel/1_voxel_env.mp4">Download video</a>.</video>
+        </div>
+        <div class="column has-text-centered">
+          <video controls muted playsinline preload="none" poster="static/images/voxel-2_voxel_env.jpg" width="100%" style="display: block; width: 100%; height: auto;" aria-label="Voxel environment demo 2: right-side region activation"><source src="static/videos/voxel/2_voxel_env.mp4" type="video/mp4">Your browser does not support the video tag. <a href="static/videos/voxel/2_voxel_env.mp4">Download video</a>.</video>
+        </div>
+      </div>
+      <div class="content is-size-5 has-text-justified" style="margin-top: 1rem;">
+        <p>Our system maps human pose observations to a 12-region occupancy vector that informs FSM updates and filters candidate upper-body motions. The videos show how occupancy changes as a person moves around our humanoid.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Real-world demonstrations: independent video carousels for both scenarios. -->
+<section class="hero is-small" id="demos">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3">Interaction Demonstrations</h2>
+      <h3 class="title is-4" style="margin-top: 1rem; margin-bottom: 1rem;">Scenario 1: Attention and Interaction Regulation</h3>
+      <div class="scenario-carousel" data-video-carousel role="region" aria-roledescription="carousel" aria-label="Scenario 1 interaction videos" tabindex="0">
+        <div class="scenario-carousel-stage">
+          <div class="scenario-carousel-viewport">
+            <div class="scenario-carousel-track" id="scenario1-track" data-carousel-track>
+              <div class="scenario-carousel-slide" data-carousel-slide data-title="Attentive State Transition" role="group" aria-roledescription="slide" aria-label="Attentive State Transition, 1 of 3">
+                <video controls muted playsinline preload="none" poster="static/images/scenario1-1_attentive.jpg" aria-label="Scenario 1, video 1: Attentive"><source src="static/videos/scenario1/1_attentive.mp4" type="video/mp4">Your browser does not support the video tag. <a href="static/videos/scenario1/1_attentive.mp4">Download video</a>.</video>
+              </div>
+              <div class="scenario-carousel-slide" data-carousel-slide data-title="Awakening State Transition" role="group" aria-roledescription="slide" aria-label="Awakening State Transition, 2 of 3" aria-hidden="true" inert>
+                <video controls muted playsinline preload="none" poster="static/images/scenario1-2_awakening.jpg" aria-label="Scenario 1, video 2: Awakening"><source src="static/videos/scenario1/2_awakening.mp4" type="video/mp4">Your browser does not support the video tag. <a href="static/videos/scenario1/2_awakening.mp4">Download video</a>.</video>
+              </div>
+              <div class="scenario-carousel-slide" data-carousel-slide data-title="Guidance State Transition" role="group" aria-roledescription="slide" aria-label="Guidance State Transition, 3 of 3" aria-hidden="true" inert>
+                <video controls muted playsinline preload="none" poster="static/images/scenario1-3_guidance.jpg" aria-label="Scenario 1, video 3: Guidance"><source src="static/videos/scenario1/3_guidance.mp4" type="video/mp4">Your browser does not support the video tag. <a href="static/videos/scenario1/3_guidance.mp4">Download video</a>.</video>
+              </div>
+            </div>
+          </div>
+          <button class="scenario-carousel-arrow is-previous" data-carousel-previous type="button" aria-label="Previous Scenario 1 video" aria-controls="scenario1-track" disabled hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 5-7 7 7 7"/></svg></button>
+          <button class="scenario-carousel-arrow is-next" data-carousel-next type="button" aria-label="Next Scenario 1 video" aria-controls="scenario1-track" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 5 7 7-7 7"/></svg></button>
+        </div>
+        <div class="scenario-carousel-caption" aria-live="polite" aria-atomic="true">
+          <h4 class="is-size-5" data-carousel-title>Attentive State Transition</h4>
+          <span data-carousel-count>1 / 3</span>
+        </div>
+      </div>
+      <h3 class="title is-4" style="margin-top: 1.5rem; margin-bottom: 1rem;">Scenario 2: Social-Affective Interaction</h3>
+      <div class="scenario-carousel" data-video-carousel role="region" aria-roledescription="carousel" aria-label="Scenario 2 interaction videos" tabindex="0">
+        <div class="scenario-carousel-stage">
+          <div class="scenario-carousel-viewport">
+            <div class="scenario-carousel-track" id="scenario2-track" data-carousel-track>
+              <div class="scenario-carousel-slide" data-carousel-slide data-title="Positive State Transition" role="group" aria-roledescription="slide" aria-label="Positive State Transition, 1 of 3">
+                <video controls muted playsinline preload="none" poster="static/images/scenario2-1_positive.jpg" aria-label="Scenario 2, video 1: Positive"><source src="static/videos/scenario2/1_positive.mp4" type="video/mp4">Your browser does not support the video tag. <a href="static/videos/scenario2/1_positive.mp4">Download video</a>.</video>
+              </div>
+              <div class="scenario-carousel-slide" data-carousel-slide data-title="Recovery State Transition" role="group" aria-roledescription="slide" aria-label="Recovery State Transition, 2 of 3" aria-hidden="true" inert>
+                <video controls muted playsinline preload="none" poster="static/images/scenario2-2_recovery.jpg" aria-label="Scenario 2, video 2: Recovery"><source src="static/videos/scenario2/2_recovery.mp4" type="video/mp4">Your browser does not support the video tag. <a href="static/videos/scenario2/2_recovery.mp4">Download video</a>.</video>
+              </div>
+              <div class="scenario-carousel-slide" data-carousel-slide data-title="Soothing State Transition" role="group" aria-roledescription="slide" aria-label="Soothing State Transition, 3 of 3" aria-hidden="true" inert>
+                <video controls muted playsinline preload="none" poster="static/images/scenario2-3_soothing.jpg" aria-label="Scenario 2, video 3: Soothing"><source src="static/videos/scenario2/3_soothing.mp4" type="video/mp4">Your browser does not support the video tag. <a href="static/videos/scenario2/3_soothing.mp4">Download video</a>.</video>
+              </div>
+            </div>
+          </div>
+          <button class="scenario-carousel-arrow is-previous" data-carousel-previous type="button" aria-label="Previous Scenario 2 video" aria-controls="scenario2-track" disabled hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 5-7 7 7 7"/></svg></button>
+          <button class="scenario-carousel-arrow is-next" data-carousel-next type="button" aria-label="Next Scenario 2 video" aria-controls="scenario2-track" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 5 7 7-7 7"/></svg></button>
+        </div>
+        <div class="scenario-carousel-caption" aria-live="polite" aria-atomic="true">
+          <h4 class="is-size-5" data-carousel-title>Positive State Transition</h4>
+          <span data-carousel-count>1 / 3</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small is-light" id="paper">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3">Paper</h2>
+      <div class="content is-size-5"><p><a href="static/paper/trhi-manuscript-source.zip" download>Download the LaTeX manuscript source, references, and figures.</a></p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@misc{jeong2026trhi,
+  title = {Temporally Decoupled Touch-Responsive Humanoid
+           Interaction with Interruptible Motion Execution},
+  author = {Jeong, Taemoon and Ma, Junghyeon and Kim, Chanwoo
+            and Min, Junha and Bang, Yunseong and Park, Jeongeun
+            and Choi, Sungjoon and Park, Kyungseo},
+  year = {2026},
+  note = {Manuscript}
+}</code></pre>
+  </div>
+</section>
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>

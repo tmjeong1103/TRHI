@@ -1,0 +1,284 @@
+body {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+
+.footer .icon-link {
+    font-size: 25px;
+    color: #000;
+}
+
+.link-block a {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.dnerf {
+  font-variant: small-caps;
+}
+
+
+.teaser .hero-body {
+  padding-top: 0;
+  padding-bottom: 3rem;
+}
+
+.teaser {
+  font-family: 'Google Sans', sans-serif;
+}
+
+
+.publication-title {
+}
+
+.publication-banner {
+  max-height: parent;
+
+}
+
+.publication-banner video {
+  position: relative;
+  left: auto;
+  top: auto;
+  transform: none;
+  object-fit: fit;
+}
+
+.publication-header .hero-body {
+}
+
+.publication-title {
+    font-family: 'Google Sans', sans-serif;
+}
+
+.publication-authors {
+    font-family: 'Google Sans', sans-serif;
+}
+
+.publication-venue {
+    color: #555;
+    width: fit-content;
+    font-weight: bold;
+}
+
+.publication-awards {
+    color: #ff3860;
+    width: fit-content;
+    font-weight: bolder;
+}
+
+.publication-authors {
+}
+
+.publication-authors a {
+   color: hsl(204, 86%, 53%) !important;
+}
+
+.publication-authors a:hover {
+    text-decoration: underline;
+}
+
+.author-block {
+  display: inline-block;
+}
+
+.publication-banner img {
+}
+
+.publication-authors {
+  /*color: #4286f4;*/
+}
+
+.publication-video {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+
+    overflow: hidden;
+    border-radius: 10px !important;
+}
+
+.publication-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.publication-body img {
+}
+
+.results-carousel {
+  overflow: hidden;
+}
+
+.results-carousel .item {
+  margin: 5px;
+  overflow: hidden;
+  padding: 20px;
+  font-size: 0;
+}
+
+.results-carousel video {
+  margin: 0;
+}
+
+.slider-pagination .slider-page {
+  background: #000000;
+}
+
+.eql-cntrb { 
+  font-size: smaller;
+}
+
+/* Center the visible institution marks, excluding DGIST's transparent margins. */
+.affiliation-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin: 1rem auto 0;
+}
+
+.affiliation-logo-ku {
+  display: block;
+  height: 100px;
+  width: auto;
+}
+
+.affiliation-logo-dgist {
+  display: block;
+  position: relative;
+  flex: 0 0 225px;
+  width: 225px;
+  aspect-ratio: 343 / 105;
+  overflow: hidden;
+}
+
+.affiliation-logo-dgist img {
+  position: absolute;
+  left: -60.932945%;
+  top: -45.714286%;
+  width: 221.574344%;
+  height: auto;
+  max-width: none;
+}
+
+@media screen and (max-width: 600px) {
+  .affiliation-logos {
+    gap: 1.5rem;
+  }
+
+  .affiliation-logo-ku {
+    height: 88px;
+  }
+
+  .affiliation-logo-dgist {
+    flex-basis: 180px;
+    width: 180px;
+  }
+}
+
+.scenario-carousel:focus-visible,
+.scenario-carousel-arrow:focus-visible {
+  outline: 3px solid #3273dc;
+  outline-offset: 4px;
+}
+
+.scenario-carousel-stage {
+  position: relative;
+}
+
+.scenario-carousel-viewport {
+  overflow: hidden;
+}
+
+.scenario-carousel-track {
+  display: flex;
+  transition: transform 300ms ease;
+}
+
+.scenario-carousel-slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+
+.scenario-carousel-slide video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  background: #111;
+}
+
+.scenario-carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  background: rgba(32, 32, 32, 0.8);
+  color: #fff;
+  cursor: pointer;
+}
+
+.scenario-carousel-arrow.is-previous {
+  left: 12px;
+}
+
+.scenario-carousel-arrow.is-next {
+  right: 12px;
+}
+
+.scenario-carousel-arrow:hover:not(:disabled) {
+  background: #363636;
+}
+
+.scenario-carousel-arrow:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.scenario-carousel-arrow[hidden] {
+  display: none;
+}
+
+.scenario-carousel-arrow svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.scenario-carousel-caption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.scenario-carousel-caption > span {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scenario-carousel-track {
+    transition: none;
+  }
+}
+
+

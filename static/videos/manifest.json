@@ -1,0 +1,42 @@
+[
+  {
+    "source": "movies/scenario1/1_attentive.mov",
+    "file": "scenario1/1_attentive.mp4",
+    "duration": "00:00:58.40"
+  },
+  {
+    "source": "movies/scenario1/2_awakening.mov",
+    "file": "scenario1/2_awakening.mp4",
+    "duration": "00:00:54.17"
+  },
+  {
+    "source": "movies/scenario1/3_guidance.mov",
+    "file": "scenario1/3_guidance.mp4",
+    "duration": "00:01:11.23"
+  },
+  {
+    "source": "movies/scenario2/1_positive.mov",
+    "file": "scenario2/1_positive.mp4",
+    "duration": "00:01:06.17"
+  },
+  {
+    "source": "movies/scenario2/2_recovery.mov",
+    "file": "scenario2/2_recovery.mp4",
+    "duration": "00:00:59.20"
+  },
+  {
+    "source": "movies/scenario2/3_soothing.mov",
+    "file": "scenario2/3_soothing.mp4",
+    "duration": "00:01:12.53"
+  },
+  {
+    "source": "movies/voxel/1_voxel_env.mov",
+    "file": "voxel/1_voxel_env.mp4",
+    "duration": "00:01:34.70"
+  },
+  {
+    "source": "movies/voxel/2_voxel_env.mov",
+    "file": "voxel/2_voxel_env.mp4",
+    "duration": "00:00:52.50"
+  }
+]
